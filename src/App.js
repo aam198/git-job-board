@@ -1,10 +1,13 @@
 import React, { useState} from 'react';
-import './styles/App.css';
+import './custom.scss';
 import useFetchJobs from './useFetchJobs';
 import { Container } from 'react-bootstrap';
 import Job from './components/Job'
 import JobsPagination from './components/JobsPagination'
 import SearchForm from './components/SearchForm';
+import Header from './components/Header';
+import "./styles/App.css"
+
 
 
 function App() {
@@ -23,9 +26,11 @@ function App() {
   }
 
   return (
-
+    <>
+    <Header>
+    <h1 className="mb-4 margin-3">GitHub Job Search</h1>
+    </Header>
     <Container className="my-5">
-      <h1 className="mb-4 margin-3">GitHub Job Search</h1>
       <SearchForm params = {params} onParamChange={handleParamChange} />
       <JobsPagination page= {page} setPage= {setPage} hasNextPage= {hasNextPage} />
       {loading && <h1>Loading...</h1>}
@@ -40,7 +45,7 @@ function App() {
       </div>
       
     </Container>
-    
+    </>
   );
 }
 

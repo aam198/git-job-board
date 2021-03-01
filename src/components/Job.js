@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Card, Badge, Button, Collapse } from 'react-bootstrap'
 import ReactMarkdown from 'react-markdown'
-import "../styles/App.css"
+import "../styles/App.css";
 
 export default function Job({ job }) {
 
     const [open, setOpen] = useState(false)
 
     return (
-        <Card className= "margin-3">
+        <Card className= "neumorph margin-3">
             <Card.Body>
              <div className="d-flex justify-content-between">
 

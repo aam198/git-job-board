@@ -1,3 +1,55 @@
+
+:root{
+  --bg-color: #fff;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+
+}
+h1{
+  font-size: 2.5rem;
+}
+h2{
+  font-size: 2.2rem;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  background-image: url("../assets/topography.svg");
+  box-shadow: 0 2px 30px rgba(0,0,0,0.1);
+
+}
+.bg-color{
+  background-color: #ffffff;
+}
+
+.margin-3{
+  margin-top: 2rem;
+}
+
+/* Styling for pagination */
+.page-item.active .page-link{
+  background-color: #A3BCB6;
+  border-color: #7a9e96;
+}
+
+.page-link{
+  color: #3c403d;
+}
+
+.neumorph{
+  border-radius: 50px;
+  background-color: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+/* Styles from create-react */
 .App {
   text-align: center;
 }
@@ -37,6 +89,3 @@
   }
 }
 
-.margin-3{
-  margin-top: 2rem;
-}
