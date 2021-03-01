@@ -8,7 +8,7 @@ export default function Job({ job }) {
     const [open, setOpen] = useState(false)
 
     return (
-        <Card className= "neumorph margin-3">
+        <Card className= "box margin-3">
             <Card.Body>
              <div className="d-flex justify-content-between">
 
@@ -30,7 +30,7 @@ export default function Job({ job }) {
             </div>
                
             <Card.Text>
-                <Button variant="info"
+                <Button className="btn"
                         onClick={() => setOpen(!open)}
                         aria-controls="example-collapse-text"
                         aria-expanded={open}> 

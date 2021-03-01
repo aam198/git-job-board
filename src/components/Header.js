@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Header() {
     return (
-        <div>
+        <>
         <header>
+            <a href="https://github.com/aam198" target="_blank">
+                    <FaGithub className="icons"> </FaGithub></a>
             <h1>Find your next professional destination...</h1>
-            <h2 className="mb-4 margin-3">GitHub Job Search</h2>
-             </header>
-        </div>
+            <h2><span className="btm-label">GitHub Job Search </span> </h2>
+          
+        </header>
+        </>
     )
 }

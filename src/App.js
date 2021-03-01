@@ -27,9 +27,7 @@ function App() {
 
   return (
     <>
-    <Header>
-    <h1 className="mb-4 margin-3">GitHub Job Search</h1>
-    </Header>
+    <Header />
     <Container className="my-5">
       <SearchForm params = {params} onParamChange={handleParamChange} />
       <JobsPagination page= {page} setPage= {setPage} hasNextPage= {hasNextPage} />
@@ -43,7 +41,6 @@ function App() {
       <div className="margin-3">
         <JobsPagination page= {page} setPage= {setPage} hasNextPage = {true} />
       </div>
-      
     </Container>
     </>
   );

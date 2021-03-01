@@ -1,41 +1,87 @@
 
 :root{
-  --bg-color: #fff;
+  --bg-color: #fffae6;
+  --accent-teal: #A3BCB6;
+
+  --main-text: #1A222F;
 }
 
 /* Global Styles */
 body {
   background-color: var(--bg-color);
+  color: var(--main-text);
+  font-family: "Courier New",Courier,monospace;
 
 }
 h1{
   font-size: 2.5rem;
-}
-h2{
-  font-size: 2.2rem;
-}
-header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 30vh;
-  background-image: url("../assets/topography.svg");
-  box-shadow: 0 2px 30px rgba(0,0,0,0.1);
-
-}
-.bg-color{
-  background-color: #ffffff;
 }
 
 .margin-3{
   margin-top: 2rem;
 }
 
+
+/* Header Styles */
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  font-family: ltc-bodoni-175;
+  width: 100%;
+  height: 40vh;
+  max-height: 45vh;
+  background-image: url("../assets/topography.svg");
+  border-bottom: 2.5px dashed #D0DADD;
+  color: var(--main-text);
+}
+header > h1{
+  width: 100%;
+  font-size: 2.7rem;
+  font-weight: bold;
+  padding-left: 1.2rem;
+}
+header > h2{
+  display: flex;
+  justify-content: center;
+  font-size: 2.9rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 4.3rem;
+}
+.btm-label{
+  box-shadow: inset 0 -18px 0 0 var(--accent-teal);
+}
+
+a > .icons {
+  position: absolute;
+  top:0;
+  right: 0;
+  margin-bottom: 3.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  color: var(--accent-teal);
+  font-size: 2.5rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover{
+  color: var(--main-text);
+  transition: color 0.15s ease-in-out;
+}
+
+svg:hover{
+  color: var(--main-text);
+}
+
+
 /* Styling for pagination */
 .page-item.active .page-link{
-  background-color: #A3BCB6;
+  background-color: var(--accent-teal);
   border-color: #7a9e96;
 }
 
@@ -43,11 +89,52 @@ header{
   color: #3c403d;
 }
 
-.neumorph{
-  border-radius: 50px;
-  background-color: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+.page-link:hover{
+  color: var(--main-text);
+  border: 1px dashed #7a9e96;
 }
+
+/* Label Styling */
+
+.form-label{
+  font-size: 1.2rem;
+}
+
+
+
+/* Card Styling */
+.box{
+  background-color: #fafbfa;
+  box-shadow: 15px 10px 0px #bbc4c6, -1px -1px 1px #fafbfa;
+}
+
+.btn{
+  color:#fff;
+  background-color: var(--accent-teal);
+  border-color: #7a9e96;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn:hover{
+  background-color: #D0DADD;
+  border: 2px dashed var(--accent-teal);
+}
+
+
+.btn-primary:not(:disabled):not(.disabled):active{
+  background-color: #D0DADD;
+  border-color: var(--accent-teal);
+}
+
+
+
+
+
+
+
+
+
 
 /* Styles from create-react */
 .App {
