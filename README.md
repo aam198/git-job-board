@@ -1,6 +1,7 @@
 
 ## Updates to make: 
 >Add animation
+
 >Create Footer 
 
 
