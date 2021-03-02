@@ -106,12 +106,19 @@ svg:hover{
   font-size: 1.2rem;
 }
 
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--accent-teal);
+}
 
 
 /* Card Styling */
 .box{
   background-color: #fafbfa;
   box-shadow: 15px 10px 0px #bbc4c6, -1px -1px 1px #fafbfa;
+}
+
+.note{
+  margin-bottom: 15px;
 }
 
 .btn{

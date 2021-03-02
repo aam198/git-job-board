@@ -5,10 +5,10 @@ import { Card } from 'react-bootstrap';
 export default function CardExample() {
     return (
         <div>
-             <Card className= "margin-3 box">
-                 <Card.Title><span className="text-muted font-weight-light">Just a title</span></Card.Title>
+             <Card className= "note box">
              <Card.Body>
-                 <div>Just some text</div>
+                 <Card.Title><span className="text-muted font-weight-light">Just an FYI: </span></Card.Title>
+                      <div>Since this project is still in dev stage response from the public api may be limited.  </div>
                 </Card.Body>
              </Card>
         </div>
