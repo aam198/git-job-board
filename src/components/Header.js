@@ -5,8 +5,11 @@ export default function Header() {
     return (
         <>
         <header>
-            <a href="https://github.com/aam198" target="_blank">
-                    <FaGithub className="icons"> </FaGithub></a>
+            <a 
+            href="https://github.com/aam198" target="_blank"
+            rel="noopener noreferrer">
+                    <FaGithub className="icons"> </FaGithub>
+            </a>
             <h1>Find your next professional destination...</h1>
             <h2><span className="btm-label">GitHub Job Search </span> </h2>
           
