@@ -1,12 +1,13 @@
 import React, { useState} from 'react';
-import './custom.scss';
-import useFetchJobs from './useFetchJobs';
+import useFetchJobs from './api/useFetchJobs';
 import { Container } from 'react-bootstrap';
 import Job from './components/Job'
 import JobsPagination from './components/JobsPagination'
 import SearchForm from './components/SearchForm';
-import Header from './components/Header';
+import Header from './container/Header';
+import CardExample from './container/CardExample';
 import "./styles/App.css"
+import { FooterContainer } from './container/FooterContainer';
 
 
 
@@ -30,6 +31,7 @@ function App() {
     <Header />
     <Container className="my-5">
       <SearchForm params = {params} onParamChange={handleParamChange} />
+      <CardExample /> 
       <JobsPagination page= {page} setPage= {setPage} hasNextPage= {hasNextPage} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Try Refreshing...</h1>}
@@ -42,6 +44,7 @@ function App() {
         <JobsPagination page= {page} setPage= {setPage} hasNextPage = {true} />
       </div>
     </Container>
+    <FooterContainer />
     </>
   );
 }
