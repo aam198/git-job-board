@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Wrapper, Row, Column, Link, Title} from './styles/footerStyle';
+import {Container, Wrapper, Row, Column, Link, Title, Copyright} from './styles/footerStyle';
 
 export default function Footer({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
@@ -23,4 +23,7 @@ Footer.Link = function FooterLink({children, ...restProps}){
 
 Footer.Title = function FooterTitle({children, ...restProps}){
     return <Title {...restProps}>{children}</Title>
+}
+Footer.Copyright = function FooterCopyright({children, ...restProps}){
+    return <Copyright {...restProps}>{children}</Copyright>
 }

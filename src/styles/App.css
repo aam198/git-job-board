@@ -140,10 +140,19 @@ svg:hover{
   border-color: var(--accent-teal);
 }
 
+/* Footer Styling */
+
+.footer-logo{
+  padding-top: 10px;
+}
 
 
-
-
+.name {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 

@@ -10,7 +10,7 @@ export default function Header() {
             rel="noopener noreferrer">
                     <FaGithub className="icons"> </FaGithub>
             </a>
-            <h1>Find your next professional destination...</h1>
+            <h1>Find your next professional destination with...</h1>
             <h2><span className="btm-label">GitHub Job Search </span> </h2>
           
         </header>
