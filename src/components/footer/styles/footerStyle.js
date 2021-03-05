@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     color: #fff;
     `
@@ -20,14 +20,14 @@ export const Wrapper = styled.div`
 export const Column = styled.div`
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-left: 50px;
+    text-align: left;
+    margin-left: 20px;
     padding-bottom: 60px;`
 
 export const Row = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 10px;
     
     @media (max-width: 1000px){
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

@@ -74,15 +74,11 @@ a > .icons {
   cursor: pointer;
 }
 
-a:hover{
-  color: var(--main-text);
-  
-}
-
-svg:hover{
+a .icons:hover{
   color: var(--main-text);
   transition: 200ms ease-in;
 }
+
 
 
 /* Styling for pagination */
@@ -144,15 +140,18 @@ svg:hover{
 
 .footer-logo{
   padding-top: 10px;
+  max-width: 220px;
 }
 
 
 .name {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.icons{
+  margin: 3px 5px;
+}
 
 
