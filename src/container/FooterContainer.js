@@ -27,8 +27,8 @@ export function FooterContainer() {
                         
                         <Footer.Link>
                              <Footer.Icons className="link-title">Projects:
-                                <AiIcons.AiOutlineGithub href="https://www.github.com" className="social-icons" /> 
-                                <FaIcons.FaCodepen className="social-icons"/>
+                                <a href="https://github.com/aam198" target="_blank"rel="noreferrer"><AiIcons.AiOutlineGithub className="social-icons" /></a> 
+                                <a href="https://codepen.io/aam198" target="_blank"rel="noreferrer"><FaIcons.FaCodepen className="social-icons"/></a>
                              </Footer.Icons>   
 
                              <Footer.Icons className="link-title">Social: 
@@ -37,7 +37,7 @@ export function FooterContainer() {
                             </Footer.Icons>
                        
                             <Footer.Icons className="link-title">Contact:      
-                                <FaIcons.FaTelegram className="social-icons" />
+                               <a href="mailto:aam198@psu.edu"><FaIcons.FaTelegram className="social-icons" /></a> 
                             </Footer.Icons>
 
                             
