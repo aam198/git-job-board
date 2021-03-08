@@ -35,16 +35,13 @@ export const Row = styled.div`
 
 export const Link = styled.div`
     color: #fff;
-    margin-bottom: 15px;
     font-size: 18px;
     text-decoration: none;
-
-        &:hover{
-            color: #1A222F;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 200ms ease-in;
-        };
+    display:flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    margin-bottom: 25px;
+    margin-left: 15px;
     `
 
 export const Title = styled.div`
@@ -58,3 +55,9 @@ export const Copyright = styled.div`
     display: flex;
     align-content: center;
     justify-content: center;`
+
+export const Icons = styled.div`
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+    
+    `

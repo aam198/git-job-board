@@ -1,11 +1,9 @@
 import React from 'react'
 import Footer from '../components/footer';
 import logo from '../assets/logo.svg';
-import name from '../assets/name_asset.svg';
-import name2 from '../assets/Asset11.svg';
-import { FaRegCopyright } from 'react-icons/fa';
-
-
+import name from '../assets/nameLogo.svg';
+import * as AiIcons from 'react-icons/ai';
+import * as FaIcons from 'react-icons/fa';
 export function FooterContainer() {
     return (
             <Footer>
@@ -13,32 +11,43 @@ export function FooterContainer() {
                    <Footer.Row>
                     <Footer.Column>
                             <img src={logo} alt="logo" className="footer-logo" />
-                            <img src={name2} alt="name logo"
+                            <img src={name} alt="name logo"
                             className="footer-logo name" />
               
                     </Footer.Column>
                     
                
                     <Footer.Column>
-                            <Footer.Title>Connect with Me:</Footer.Title>
+                        
                      </Footer.Column>
 
-                     <Footer.Column>
-                        
 
-                        <Footer.Link href="#">Projects</Footer.Link>
-                            <Footer.Link href="#">Contact</Footer.Link>
-                            <Footer.Link href="#">Social</Footer.Link>
-                      
+                     <Footer.Column>
+                        <Footer.Title>Connect with Me:</Footer.Title>
+                        
+                        <Footer.Link>
+                             <Footer.Icons className="link-title">Projects:
+                                <AiIcons.AiOutlineGithub href="https://www.github.com" className="social-icons" /> 
+                                <FaIcons.FaCodepen className="social-icons"/>
+                             </Footer.Icons>   
+
+                             <Footer.Icons className="link-title">Social: 
+                                <a href="https://www.twitter.com/alliemartz" target="_blank" rel="noreferrer"><AiIcons.AiFillTwitterCircle className="social-icons"/>
+                                </a>
+                            </Footer.Icons>
+                       
+                            <Footer.Icons className="link-title">Contact:      
+                                <FaIcons.FaTelegram className="social-icons" />
+                            </Footer.Icons>
+
                             
+                        </Footer.Link>
                     </Footer.Column>
                         
 
-                    </Footer.Row>
+                </Footer.Row>
 
-
-
-                    <Footer.Copyright><FaRegCopyright className="icons"> </FaRegCopyright> 2021 Designed by Allie Martz</Footer.Copyright>
+                    <Footer.Copyright><FaIcons.FaRegCopyright className="icons"> </FaIcons.FaRegCopyright> 2021 Designed by Allie Martz</Footer.Copyright>
                </Footer.Wrapper>
               
             </Footer>
