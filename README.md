@@ -1,8 +1,5 @@
 
-## Updates to make: 
->Add animation
-
->Create Footer 
+## Tech Used for this project: 
 
 
 # Getting Started with Create React App
