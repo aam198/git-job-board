@@ -124,9 +124,10 @@ a .icons:hover{
 }
 
 .note{
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
 }
 
+/* Buttons styling */
 .btn{
   color:#fff;
   background-color: var(--accent-teal);
@@ -146,11 +147,34 @@ a .icons:hover{
   border-color: var(--accent-teal);
 }
 
+
+.scroll-button{
+  background-color: #91a0a3;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: rgba(20, 21, 26, 0.1) 0px 0px 1px, rgba(71, 77, 87, 0.04) 0px 3px 6px, rgba(20, 21, 26, 0.04) 0px 1px 2px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  opacity: 1;
+  visibility: visible;
+  transition-property: opacity, visibility;
+}
+
 /* Footer Styling */
 
 .footer-logo{
   padding-top: 10px;
-  max-width: 220px;
+  max-width: 200px;
 }
 
 

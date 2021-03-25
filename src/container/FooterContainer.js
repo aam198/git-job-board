@@ -4,6 +4,8 @@ import logo from '../assets/logo.svg';
 import name from '../assets/nameLogo.svg';
 import * as AiIcons from 'react-icons/ai';
 import * as FaIcons from 'react-icons/fa';
+
+
 export function FooterContainer() {
     return (
             <Footer>
