@@ -12,20 +12,7 @@ export function FooterContainer() {
                <Footer.Wrapper>
                    <Footer.Row>
                     <Footer.Column>
-                            <img src={logo} alt="logo" className="footer-logo" />
-                            <img src={name} alt="name logo"
-                            className="footer-logo name" />
-              
-                    </Footer.Column>
-                    
-               
-                    <Footer.Column>
-                        
-                     </Footer.Column>
-
-
-                     <Footer.Column>
-                        <Footer.Title>Connect with Me:</Footer.Title>
+                    <Footer.Title>Connect with Me:</Footer.Title>
                         
                         <Footer.Link>
                              <Footer.Icons className="link-title">Projects:
@@ -41,9 +28,18 @@ export function FooterContainer() {
                             <Footer.Icons className="link-title">Contact:      
                                <a href="mailto:aam198@psu.edu"><FaIcons.FaTelegram className="social-icons" /></a> 
                             </Footer.Icons>
-
-                            
+  
                         </Footer.Link>
+              
+                    </Footer.Column>
+                    
+
+                     <Footer.Column>
+                         <Footer.Logo>
+                                <img src={logo} alt="logo" className="footer-logo" />
+                                <img src={name} alt="name logo"
+                                className="footer-logo name" />
+                        </Footer.Logo>
                     </Footer.Column>
                         
 
