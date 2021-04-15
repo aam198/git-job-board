@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Footer from '../components/footer';
 import logo from '../assets/logo.svg';
 import name from '../assets/nameLogo.svg';

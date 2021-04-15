@@ -1,5 +1,5 @@
-import axios from 'axios'
-import { useReducer, useEffect } from 'react'
+import axios from 'axios';
+import { useReducer, useEffect } from 'react';
 
 const ACTIONS = {
     MAKE_REQUEST: 'make-request',
