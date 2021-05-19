@@ -26,7 +26,7 @@ export function FooterContainer() {
                             </Footer.Icons>
                        
                             <Footer.Icons className="link-title">Contact:      
-                               <a href="mailto:aam198@psu.edu"><FaIcons.FaTelegram className="social-icons" /></a> 
+                               <a href="mailto:alliemartzdev@gmail.com"><FaIcons.FaTelegram className="social-icons" /></a> 
                             </Footer.Icons>
   
                         </Footer.Link>
