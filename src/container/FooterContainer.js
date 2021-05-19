@@ -36,16 +36,19 @@ export function FooterContainer() {
 
                      <Footer.Column>
                          <Footer.Logo>
-                                <img src={logo} alt="logo" className="footer-logo" />
-                                <img src={name} alt="name logo"
-                                className="footer-logo name" />
+                         
+                                <a href ="http://www.alliemartz.com" className="site" target="_blank" rel="noreferrer" >
+                                 <img src={logo} alt="logo" className="footer-logo" />
+                                    <img src={name} alt="name logo" className="footer-logo name" />
+                                </a>
                         </Footer.Logo>
                     </Footer.Column>
                         
 
                 </Footer.Row>
 
-                    <Footer.Copyright><FaIcons.FaRegCopyright className="icons"> </FaIcons.FaRegCopyright> 2021 Designed by Allie Martz</Footer.Copyright>
+                    <Footer.Copyright><FaIcons.FaRegCopyright className="icons"> </FaIcons.FaRegCopyright> 2021 Designed by 
+                    <a href="http://www.alliemartz.com" className ="site-link" target="_blank" rel = "noreferrer"> Allie Martz</a></Footer.Copyright> 
                </Footer.Wrapper>
               
             </Footer>
