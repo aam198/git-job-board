@@ -2,8 +2,13 @@
 :root{
   --bg-color: #fffae6;
   --accent-teal: #A3BCB6;
-
   --main-text: #1A222F;
+
+  --teal-hover:#7a9e96;
+
+
+  --border-grey: #D0DADD;
+  --border-teal: #7a9e96;
 }
 
 /* Global Styles */
@@ -39,7 +44,7 @@ header{
   height: 40vh;
   max-height: 45vh;
   background-image: url("../assets/topography.svg");
-  border-bottom: 2.5px dashed #D0DADD;
+  border-bottom: 2.5px dashed var(--border-grey);
   color: var(--main-text);
 }
 header > h1{
@@ -98,7 +103,7 @@ a .icons:hover{
 
 .page-item.active .page-link{
   background-color: var(--accent-teal);
-  border-color: #7a9e96;
+  border-color: var(--border-teal);
 }
 
 .page-link{
@@ -107,7 +112,7 @@ a .icons:hover{
 
 .page-link:hover{
   color: var(--main-text);
-  border: 1px dashed #7a9e96;
+  border: 1px dashed var(--border-teal);
 }
 
 /* Form & Label Styling */
@@ -135,19 +140,19 @@ a .icons:hover{
 .btn{
   color:#fff;
   background-color: var(--accent-teal);
-  border-color: #7a9e96;
+  border-color: var(--border-teal);
   font-size: 18px;
   font-weight: bold;
 }
 
 .btn:hover{
-  background-color: #7a9e96;
+  background-color: var(--teal-hover);
   border: 2px dashed var(--accent-teal);
 }
 
 
 .btn-primary:not(:disabled):not(.disabled):active{
-  background-color: #D0DADD;
+  background-color: var(--border-grey);
   border-color: var(--accent-teal);
 }
 
@@ -155,7 +160,7 @@ a .icons:hover{
 .scroll-button{
   background-color: var(--main-text);
   color: #fffae6;
-  border: 2px solid #a3bcb6;
+  border: 2px solid var(--border-teal);
   border: none;
   width: 50px;
   height: 50px;
@@ -176,7 +181,7 @@ a .icons:hover{
 }
 
 .scroll-button:hover{
-  border: 2px solid #a3bcb6;
+  border: 2px solid var(--main-text);
   background-color: #6c757d;
   transition: all ease 0.3s;
 }
