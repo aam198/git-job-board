@@ -1,24 +1,23 @@
 import axios from 'axios';
 import { useReducer, useEffect } from 'react';
 
-const BASE_URL = 'https://findwork.dev/api/jobs/'
+const BASE_URL = 'https://remotive.io/api/remote-jobs/categories/'
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+// const API_KEY = process.env.REACT_APP_API_KEY;
 
-const authAxios = axios.create({
-  baseURL: BASE_URL,
-  headers: {
-    Authorization: `${API_KEY}`
-  }
-})
+// const authAxios = axios.create({
+//   baseURL: BASE_URL,
+//   headers: {
+//     Authorization: `${API_KEY}`
+//   }
+// })
+
 const ACTIONS = {
     MAKE_REQUEST: 'make-request',
     GET_DATA: 'get-data',
     ERROR: 'error',
     UPDATE_HAS_NEXT_PAGE: 'update-has-next-page'
 }
-
-
 
 
 
@@ -55,9 +54,9 @@ export default function useFetchJobs(params, page){
 
         //axios.get() - a request to the public api url provided, variable was made above, and pass in options / params
 
-        authAxios.get(BASE_URL, {
+        axios.get(BASE_URL, {
             cancelToken: cancelToken1.token,
-            params: {markdown: true, page: page, ...params}
+            params: { page: page, ...params}
         }).then(res => {
             dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } })
         }).catch(e => {
@@ -67,9 +66,9 @@ export default function useFetchJobs(params, page){
 
         //Creating New Axios request to organize pages 
         const cancelToken2 = axios.CancelToken.source()
-        authAxios.get(BASE_URL, {
+        axios.get(BASE_URL, {
             cancelToken: cancelToken2.token,
-            params: {markdown: true, page: page + 1, ...params}
+            params: {page: page + 1, ...params}
         }).then(res => {
             dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.length !== 0 } })
         }).catch(e => {
