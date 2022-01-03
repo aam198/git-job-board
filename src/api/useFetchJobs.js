@@ -1,6 +1,16 @@
 import axios from 'axios';
 import { useReducer, useEffect } from 'react';
 
+const BASE_URL = 'https://findwork.dev/api/jobs/'
+
+const API_KEY = process.env.REACT_APP_API_KEY;
+
+const authAxios = axios.create({
+  baseURL: BASE_URL,
+  headers: {
+    Authorization: `${API_KEY}`
+  }
+})
 const ACTIONS = {
     MAKE_REQUEST: 'make-request',
     GET_DATA: 'get-data',
@@ -9,7 +19,7 @@ const ACTIONS = {
 }
 
 
-const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json'
+
 
 
 function reducer(state, action){
@@ -45,7 +55,7 @@ export default function useFetchJobs(params, page){
 
         //axios.get() - a request to the public api url provided, variable was made above, and pass in options / params
 
-        axios.get(BASE_URL, {
+        authAxios.get(BASE_URL, {
             cancelToken: cancelToken1.token,
             params: {markdown: true, page: page, ...params}
         }).then(res => {
@@ -57,7 +67,7 @@ export default function useFetchJobs(params, page){
 
         //Creating New Axios request to organize pages 
         const cancelToken2 = axios.CancelToken.source()
-        axios.get(BASE_URL, {
+        authAxios.get(BASE_URL, {
             cancelToken: cancelToken2.token,
             params: {markdown: true, page: page + 1, ...params}
         }).then(res => {
