@@ -18,7 +18,7 @@ function App() {
   const [page, setPage] = useState(1)
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
   
-
+  
 
   //Function for Search and to update params
   function handleParamChange(e) {
@@ -33,18 +33,18 @@ function App() {
  
 
   return (
+    
     <>
     <Header />
     <Container className="my-5">
-      <SearchForm params = {params} onParamChange={handleParamChange} />
+      <SearchForm params={params} onParamChange={handleParamChange} />  
       <CardExample /> 
-      <JobsPagination page= {page} setPage= {setPage} hasNextPage= {hasNextPage} />
+      <JobsPagination page={page} setPage={setPage} hasNextPage={true} />
       {loading && <h1>Loading...</h1>}
-      {error && <h1>Try Refreshing...</h1>}
+      {error && <h1>Error. Try Refreshing.</h1>}
       {jobs.map(job => {
-        return <Job key={job.id} job = {job} />
-       }
-      )}
+        return <Job key={job.id} job={job} />
+      })}
     <ScrollToTop showUnder={200}>
          <span>
            <img src={scrollUp} 
@@ -55,7 +55,7 @@ function App() {
     </ScrollToTop>
 
       <div className="margin-3">
-        <JobsPagination page= {page} setPage= {setPage} hasNextPage = {true} />
+        <JobsPagination page= {page} setPage= {setPage} hasNextPage = {hasNextPage} />
       </div>
 
     </Container>

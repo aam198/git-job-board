@@ -1,15 +1,10 @@
 import axios from 'axios';
 import { useReducer, useEffect } from 'react';
 
-const BASE_URL = 'https://arbeitnow.com/api/job-board-api'
+const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://arbeitnow.com/api/job-board-api.json'
 
 
-const config = {
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET,OPTIONS"
-  }
-};
+
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -62,12 +57,12 @@ export default function useFetchJobs(params, page){
 
         //axios.get() - a request to the public api url provided, variable was made above, and pass in options / params
 
-        axios.get(BASE_URL, config, {
+        axios.get(BASE_URL,  {
             cancelToken: cancelToken1.token,
-            params: { page: page, ...params}
+            params: {markdown: true,  page: page, ...params}
         }).then(res => {
-            dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } })
-            
+            dispatch({ type: ACTIONS.GET_DATA, payload: { jobs:[ res.data] } })
+            // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function if [res.data] does not work
         }).catch(e => {
             if(axios.isCancel(e))return
             dispatch({ type: ACTIONS.ERROR, payload: { error:e } }) 
@@ -75,12 +70,11 @@ export default function useFetchJobs(params, page){
 
         //Creating New Axios request to organize pages 
         const cancelToken2 = axios.CancelToken.source()
-        axios.get(BASE_URL, {
+        axios.get(BASE_URL,  {
             cancelToken: cancelToken2.token,
-            params: {page: page + 1, ...params}
+            params: {markdown: true, page: page + 1, ...params}
         }).then(res => {
-            dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.length !== 0 } })
-            console.log(res.data)
+          dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.length !== 0 } }) 
         }).catch(e => {
             if(axios.isCancel(e))return
             dispatch({ type: ACTIONS.ERROR, payload: { error:e } }) 
