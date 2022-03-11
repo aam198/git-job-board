@@ -1,7 +1,15 @@
 import axios from 'axios';
 import { useReducer, useEffect } from 'react';
 
-const BASE_URL = 'https://remotive.io/api/remote-jobs/categories/'
+const BASE_URL = 'https://arbeitnow.com/api/job-board-api'
+
+
+const config = {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,OPTIONS"
+  }
+};
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -54,11 +62,12 @@ export default function useFetchJobs(params, page){
 
         //axios.get() - a request to the public api url provided, variable was made above, and pass in options / params
 
-        axios.get(BASE_URL, {
+        axios.get(BASE_URL, config, {
             cancelToken: cancelToken1.token,
             params: { page: page, ...params}
         }).then(res => {
             dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } })
+            
         }).catch(e => {
             if(axios.isCancel(e))return
             dispatch({ type: ACTIONS.ERROR, payload: { error:e } }) 
@@ -71,6 +80,7 @@ export default function useFetchJobs(params, page){
             params: {page: page + 1, ...params}
         }).then(res => {
             dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.length !== 0 } })
+            console.log(res.data)
         }).catch(e => {
             if(axios.isCancel(e))return
             dispatch({ type: ACTIONS.ERROR, payload: { error:e } }) 

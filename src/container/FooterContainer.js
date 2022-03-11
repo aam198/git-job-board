@@ -42,9 +42,7 @@ export function FooterContainer() {
                                     <img src={name} alt="name logo" className="footer-logo name" />
                                 </a>
                         </Footer.Logo>
-                    </Footer.Column>
-                        
-
+                    </Footer.Column>  
                 </Footer.Row>
 
                     <Footer.Copyright><FaIcons.FaRegCopyright className="icons"> </FaIcons.FaRegCopyright> 2021 Designed by 
