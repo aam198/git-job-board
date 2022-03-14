@@ -57,8 +57,8 @@ function App() {
       <JobsPagination page={page} setPage={setPage} hasNextPage={true} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
-      {jobs.map(job => {
-        return <Job key={job.id} job={job} />
+      {jobs.map((job, index) => {
+        return <Job key={index} job={job} />
       })}
     <ScrollToTop showUnder={200}>
          <span>

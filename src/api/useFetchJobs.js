@@ -5,7 +5,6 @@ const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://arbeitnow.com/api/
 
 
 
-
 // const API_KEY = process.env.REACT_APP_API_KEY;
 
 // const authAxios = axios.create({
