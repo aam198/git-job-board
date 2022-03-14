@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useReducer, useEffect } from 'react';
 
-const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://arbeitnow.com/api/job-board-api.json'
+const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://arbeitnow.com/api/job-board-api'
 
 
 
