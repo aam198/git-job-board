@@ -14,9 +14,9 @@ export default function Job({ job }) {
 
                 <div>
                     <Card.Title>{job.title} - <span className="text-muted font-weight-light">{job.company_name}</span></Card.Title>
-                    {/* <Card.Subtitle className="text-muted mb-2">
+                    <Card.Subtitle className="text-muted mb-2">
                         {new Date(job.created_at).toLocaleDateString()}
-                    </Card.Subtitle> */}
+                    </Card.Subtitle>
                     <Badge variant="secondary" className="mr-2">{job.job_type}</Badge>
                     <Badge variant="secondary">{job.location}</Badge>
                         <div style={{ wordBreak: 'break-all' }}>

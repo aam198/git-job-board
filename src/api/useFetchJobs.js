@@ -60,7 +60,9 @@ export default function useFetchJobs(params, page){
             cancelToken: cancelToken1.token,
             params: {markdown: true,  page: page, ...params}
         }).then(res => {
-            dispatch({ type: ACTIONS.GET_DATA, payload: { jobs:[ res.data] } })
+            dispatch({ type: ACTIONS.GET_DATA, payload: { jobs:[ res.data] } 
+            })
+           
             // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function if [res.data] does not work
         }).catch(e => {
             if(axios.isCancel(e))return
