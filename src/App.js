@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import useFetchJobs from './api/useFetchJobs';
 import { Container } from 'react-bootstrap';
 import Job from './components/Job';
@@ -14,20 +14,22 @@ import scrollUp from './assets/scrollUp.svg';
 
 
 function App() {
-  const makeAPICall = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/cors', {mode:'cors'});
-      const data = await response.json();
-      console.log({data})
-    }
-    catch (e) {
-      console.log(e)
-    }
-  }
 
-  useEffect(() => {
-    makeAPICall();
-  }, [])
+  // const makeAPICall = async () => {
+  //   try {
+  //     const response = await fetch('http://localhost:3000/', {mode:'cors'});
+  //     const data = await response.json();
+  //     console.log(data.title);
+  //     console.log({data})
+  //   }
+  //   catch(e) {
+  //     console.log(e)
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   makeAPICall();
+  // }, [])
 
   const [params, setParams] = useState({})
   const [page, setPage] = useState(1)
@@ -45,7 +47,7 @@ function App() {
     })
   }
 
- 
+  console.log(jobs)
 
   return (
     
@@ -57,17 +59,17 @@ function App() {
       <JobsPagination page={page} setPage={setPage} hasNextPage={true} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
-      {jobs.map((job, index) => {
+      {[jobs].map((job, index) => {
         return <Job key={index} job={job} />
       })}
-    <ScrollToTop showUnder={200}>
-         <span>
-           <img src={scrollUp} 
-            className="scroll-button"
-            alt="Scroll up button" />
-          </span>
-         
-    </ScrollToTop>
+
+      <ScrollToTop showUnder={200}>
+          <span>
+            <img src={scrollUp} 
+              className="scroll-button"
+              alt="Scroll up button" />
+            </span>
+      </ScrollToTop>
 
       <div className="margin-3">
         <JobsPagination page= {page} setPage= {setPage} hasNextPage = {hasNextPage} />

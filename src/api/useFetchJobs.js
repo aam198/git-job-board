@@ -3,7 +3,11 @@ import { useReducer, useEffect } from 'react';
 
 const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://arbeitnow.com/api/job-board-api'
 
-
+const configHeader = {
+  headers: {
+    'Content-Type': "origin",
+  }
+}
 
 // const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -56,11 +60,11 @@ export default function useFetchJobs(params, page){
 
         //axios.get() - a request to the public api url provided, variable was made above, and pass in options / params
 
-        axios.get(BASE_URL,  {
+        axios.get(BASE_URL, configHeader,  {
             cancelToken: cancelToken1.token,
             params: {markdown: true,  page: page, ...params}
         }).then(res => {
-            dispatch({ type: ACTIONS.GET_DATA, payload: { jobs:[ res.data] } 
+            dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } 
             })
            
             // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function if [res.data] does not work
@@ -71,7 +75,7 @@ export default function useFetchJobs(params, page){
 
         //Creating New Axios request to organize pages 
         const cancelToken2 = axios.CancelToken.source()
-        axios.get(BASE_URL,  {
+        axios.get(BASE_URL, configHeader,  {
             cancelToken: cancelToken2.token,
             params: {markdown: true, page: page + 1, ...params}
         }).then(res => {
