@@ -3,7 +3,7 @@ import { Card, Badge, Button, Collapse } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 import '../styles/App.css';
 
-export default function Job({ job }) {
+export default function Job( {job} ) {
 
     const [open, setOpen] = useState(false)
   
@@ -11,7 +11,6 @@ export default function Job({ job }) {
         <Card className= "box margin-3">
             <Card.Body>
              <div className="d-flex justify-content-between">
-
                 <div>
                     <Card.Title>{ job.title }<span className="text-muted font-weight-light">{job.company_name}</span></Card.Title>
                     <Card.Subtitle className="text-muted mb-2">
@@ -25,8 +24,6 @@ export default function Job({ job }) {
                         </div> 
 
                 </div>
-                
-
                 
             </div>
                

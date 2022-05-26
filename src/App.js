@@ -6,6 +6,7 @@ import JobsPagination from './components/JobsPagination';
 import SearchForm from './components/SearchForm';
 import Header from './container/Header';
 import CardExample from './container/CardExample';
+import JobCard from './container/JobCard';
 import './styles/App.css';
 import { FooterContainer } from './container/FooterContainer';
 import ScrollToTop from 'react-scroll-up';
@@ -31,11 +32,12 @@ function App() {
   //   makeAPICall();
   // }, [])
 
-  const [params, setParams] = useState({})
+  const [params, setParams] = useState([])
   const [page, setPage] = useState(1)
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
   
-  
+  // const jobsArr = jobs.split(',');
+
 
   //Function for Search and to update params
   function handleParamChange(e) {
@@ -47,20 +49,24 @@ function App() {
     })
   }
 
-  console.log(jobs)
+  // const jobsArr = Array.from(jobs.data);
+  // console.log(jobsArr);
+  console.log(jobs);
+
 
   return (
     
     <>
     <Header />
-    <Container className="my-5">
-      <SearchForm params={params} onParamChange={handleParamChange} />  
-      <CardExample /> 
-      <JobsPagination page={page} setPage={setPage} hasNextPage={true} />
+    <Container className="my-5" >
+      <SearchForm params={params} onParamChange={handleParamChange} />
+      <CardExample />
+      <JobsPagination key={jobs.id} page={page} setPage={setPage} hasNextPage={hasNextPage} />
+      <JobCard />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
-      {[jobs].map((job, index) => {
-        return <Job key={index} job={job} />
+      {jobs.map(job => {
+        return <Job key={job.id} job={job} />
       })}
 
       <ScrollToTop showUnder={200}>
