@@ -13,12 +13,12 @@ export default function JobCard() {
             <Card.Body>
               <div className="d-flex justify-content-between">
               <div>
-                    <Card.Title>Senior Web Developer<span className="text-muted font-weight-light"> blueModus</span></Card.Title>
+                    <Card.Title>Senior Web Developer -<span className="text-muted font-weight-light"> blueModus</span></Card.Title>
                     <Card.Subtitle className="text-muted mb-2">
                        {/* {job.created_at} */}
                         {/* {new Date(job.created_at).toLocaleDateString()} */}
                     </Card.Subtitle>
-                    <Badge variant="secondary" className="mr-2">JS</Badge>
+                    <Badge variant="secondary" className="mr-2">Full-Time</Badge>
                     <Badge variant="secondary">Remote</Badge>
                         <div style={{ wordBreak: 'break-all' }}>
                             <ReactMarkdown source='https://bluemodus.com/senior-web-developer-job-description' />

@@ -65,7 +65,7 @@ function App() {
       <JobCard />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
-      {jobs.map(job => {
+      {jobs.map((job) => {
         return <Job key={job.id} job={job} />
       })}
 

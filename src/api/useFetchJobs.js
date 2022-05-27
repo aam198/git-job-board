@@ -68,7 +68,7 @@ export default function useFetchJobs(params, page) {
           params: { markdown: true, page: page, ...params }
         }).then(res => {
           dispatch({ type: ACTIONS.GET_DATA, 
-            payload: {jobs: JSON.stringify(res.data)} }) 
+            payload: {jobs: res.data.data} }) 
            
             // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function if [res.data] does not work
         }).catch(e => {
@@ -82,7 +82,7 @@ export default function useFetchJobs(params, page) {
           cancelToken: cancelToken2.token,
           params: { markdown: true, page: page + 1, ...params }
         }).then(res => {
-          dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.length !== 0 } })  
+          dispatch({ type: ACTIONS.UPDATE_HAS_NEXT_PAGE, payload: { hasNextPage: res.data.data.length !== 0 } })  
         }).catch(e => {
           if (axios.isCancel(e)) return
           dispatch({ type: ACTIONS.ERROR, payload: { error: e } }) 
