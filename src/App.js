@@ -32,7 +32,7 @@ function App() {
   //   makeAPICall();
   // }, [])
 
-  const [params, setParams] = useState([])
+  const [params, setParams] = useState({})
   const [page, setPage] = useState(1)
   const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page)
   
@@ -52,7 +52,10 @@ function App() {
   // const jobsArr = Array.from(jobs.data);
   // console.log(jobsArr);
   console.log(jobs);
-
+  // const job = jobs[0];
+  // job.forEach((item) => {
+  //   console.log(item.title)
+  // })
 
   return (
     
@@ -61,12 +64,12 @@ function App() {
     <Container className="my-5" >
       <SearchForm params={params} onParamChange={handleParamChange} />
       <CardExample />
-      <JobsPagination key={jobs.id} page={page} setPage={setPage} hasNextPage={hasNextPage} />
+      <JobsPagination key={jobs.created_at} page={page} setPage={setPage} hasNextPage={hasNextPage} />
       <JobCard />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
       {jobs.map((job) => {
-        return <Job key={job.id} job={job} />
+        return <Job key={job.created_at} job={job} />
       })}
 
       <ScrollToTop showUnder={200}>

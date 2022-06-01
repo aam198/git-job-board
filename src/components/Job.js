@@ -3,10 +3,12 @@ import { Card, Badge, Button, Collapse } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 import '../styles/App.css';
 
-export default function Job( {job} ) {
+export default function Job( { job } ) {
 
     const [open, setOpen] = useState(false)
-  
+
+    const type = job.job_types;
+
     return (
         <Card className= "box margin-3">
             <Card.Body>
