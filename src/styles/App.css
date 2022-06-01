@@ -163,6 +163,12 @@ a .icons:hover{
   border-color: var(--accent-teal);
 }
 
+.btn-primary.focus, .btn-primary:focus {
+  background-color: var(--teal-hover);
+  border: 1px dashed var(--accent-teal);
+  box-shadow: 0 0 0 .1rem var(--accent-teal);
+}
+
 
 .scroll-button{
   background-color: var(--main-text);

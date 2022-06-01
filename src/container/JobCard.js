@@ -21,7 +21,7 @@ export default function JobCard() {
                     <Badge variant="secondary" className="mr-2">Full-Time</Badge>
                     <Badge variant="secondary">Remote</Badge>
                         <div style={{ wordBreak: 'break-all' }}>
-                            <ReactMarkdown source='https://bluemodus.com/senior-web-developer-job-description' />
+                            <ReactMarkdown className="py-1" source='https://bluemodus.com/senior-web-developer-job-description' />
                         </div> 
                   </div>
                 </div>
@@ -36,8 +36,8 @@ export default function JobCard() {
 
             <Collapse in={open}>
                 <div className = "mt-4">
-                    <ul>
-                      <li>Working closely with both internal and external design teams to ensure the feasibility of the design, clarify ambiguous designs, and create rich interactive user interfaces.</li>
+                    <ul className ="px-3">
+                      <li className = "py-2">Working closely with both internal and external design teams to ensure the feasibility of the design, clarify ambiguous designs, and create rich interactive user interfaces.</li>
                       <li>Using modern semantic HTML, CSS, and JavaScript to create static websites for integration into a content management system and dynamic, API-consuming components and single-page apps.</li></ul>
                 </div>
             </Collapse>

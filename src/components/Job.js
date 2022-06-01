@@ -7,8 +7,6 @@ export default function Job( { job } ) {
 
     const [open, setOpen] = useState(false)
 
-    const type = job.job_types;
-
     return (
         <Card className= "box margin-3">
             <Card.Body>
