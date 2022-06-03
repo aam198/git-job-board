@@ -38,7 +38,9 @@ export default function JobCard() {
                 <div className = "mt-4">
                     <ul className ="px-3">
                       <li className = "py-2">Working closely with both internal and external design teams to ensure the feasibility of the design, clarify ambiguous designs, and create rich interactive user interfaces.</li>
-                      <li>Using modern semantic HTML, CSS, and JavaScript to create static websites for integration into a content management system and dynamic, API-consuming components and single-page apps.</li></ul>
+                      <li className = "py-2">Using modern semantic HTML, CSS, and JavaScript to create static websites for integration into a content management system and dynamic, API-consuming components and single-page apps.</li>
+                      <li className = "py-2">You will be working on a small technical team with Full-Stack developers, UX/UI Developers, QA Engineers, Solution Leads/Software Architects, a Project Manager, and a Strategic Director/Account Manager to build and maintain websites, webstores, intranets, and web applications for a handful of clients. </li>
+                      <li className = "py-2">If you are a Web Developer, Full-Stack Developer, Backend Developer, Software Engineer, Web Application Engineer, Programmer Analyst, or Web Programmer, then our Senior Web Developer role may be the perfect role for you.</li></ul>
                 </div>
             </Collapse>
                 </Card.Body>

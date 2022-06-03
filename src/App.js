@@ -66,11 +66,11 @@ function App() {
       <CardExample />
       <JobsPagination key={jobs.created_at} page={page} setPage={setPage} hasNextPage={hasNextPage} />
       <JobCard />
-      {loading && <h1>Loading...</h1>}
+      {/* {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
       {jobs.map((job) => {
         return <Job key={job.created_at} job={job} />
-      })}
+      })} */}
 
       <ScrollToTop showUnder={200}>
           <span>

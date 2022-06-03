@@ -41,8 +41,8 @@ header{
   align-content: flex-end;
   font-family: 'ltc-bodoni-175', serif;
   width: 100%;
-  height: 40vh;
-  max-height: 45vh;
+  height: 32vh;
+  max-height: 32vh;
   background-image: url("../assets/topography.svg");
   border-bottom: 2.5px dashed var(--border-grey);
   color: var(--main-text);
