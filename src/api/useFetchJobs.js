@@ -66,10 +66,10 @@ export default function useFetchJobs(params, page) {
           mode: 'no-cors',
           cancelToken: cancelToken1.token,
           params: { markdown: true, page: page, ...params }
-        }).then((res) => {
-          const data = res.data;
+        }).then(res => {
+          // const data = res.data;
           dispatch({ type: ACTIONS.GET_DATA, 
-            payload: {jobs: data.data } }) 
+            payload: {jobs: res.data } }) 
            
             // https://stackoverflow.com/questions/30142361/react-js-uncaught-typeerror-this-props-data-map-is-not-a-function if [res.data] does not work
         }).catch(e => {
